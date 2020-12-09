@@ -3,9 +3,9 @@ const Employee = require('./Employee');
 
 // create new class using extend from Employee class
 class Manager extends Employee {
-  constructor(name, officeNumber) {
-    super(name, 1, 'manager@mail.com');
-    this.officeNumber = officeNumber;
+  constructor(name, id, email, officeNumber) {
+    super(name, id, email);
+    this.officeNumber = 100;
   }
 
   getRole() {
@@ -17,5 +17,8 @@ class Manager extends Employee {
   }
 }
 
-console.log(Manager);
+const testValue = 100;
+const e = new Manager('Foo', 1, 'test@test.com', testValue);
+
+// console.log(Manager);
 module.exports = Manager;
